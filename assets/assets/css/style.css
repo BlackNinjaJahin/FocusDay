@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(72, 163, 0, 0.07);
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 32px;
+  color: #48A300;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.title span {
+  color: #61481C;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.app-container {
+  background-color: #FBFBFB;
+  margin: auto;
+  border-radius: 15px;
+  padding: 32px 48px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Bar Container */
+.progressbar {
+  height: 30px;
+  background-color: rgba(72, 163, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden; /* Ensures progress stays within bounds */
+}
+
+/* Progress Value (Dynamic Text and Bar) */
+.progress-value {
+  height: 100%;
+  background-color: #48A300;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 12px; /* Adjusted for readability */
+  color: #FBFBFB;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align text in progress bar */
+  white-space: nowrap;
+  transition: width 0.3s ease; /* Smooth transition for progress updates */
+}
+
+/* Progress Text (Message Below Progress Bar) */
+.progress-text {
+  font-size: 14px;
+  color: #858586; /* Neutral color for dynamic messages */
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Error State */
+.progress-text.error {
+  color: #FF5151; /* Red for error state */
+}
+
+/* Success State */
+.progress-text.success {
+  color: #48A300; /* Green for success state */
+}
+
+.error-message {
+  font-size: 14px;
+  color: #FF5151;
+  margin-top: 4px;
+  display: none;
+}
+
+/* Goal Container */
+.goal-container {
+  display: flex; /* Flexbox for alignment */
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 17px;
+  padding: 16px;
+  background-color: #FFF;
+  margin-bottom: 24px;
+}
+
+.custom-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(97, 72, 28, 0.3);
+  border-radius: 50%;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-checkbox img {
+  display: none;
+}
+
+.goal-input {
+  border: none;
+  outline: none;
+  padding-left: 16px;
+  font-family: inherit;
+  font-size: 16px;
+  width: 100%;
+}
+
+.goal-input::placeholder {
+  color: #D9D9D9;
+}
+
+.quote {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.quote-author {
+  text-align: center;
+  font-weight: 500;
+  font-size: 10px;
+  color: #858586;
+  margin-top: 32px;
+}
+
+.completed .custom-checkbox {
+  background-color: #48A300;
+  border-color: #48A300;
+}
+
+.completed .custom-checkbox img {
+  display: block;
+}
+
+.completed .goal-input {
+  color: #48A300;
+  text-decoration: line-through;
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets, < 768px) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .app-container {
+    padding: 16px;
+  }
+
+  .goal-container {
+    margin-bottom: 16px;
+  }
+
+  .progressbar {
+    height: 25px;
+  }
+
+  .progress-value {
+    font-size: 10px;
+  }
+
+  .progress-text {
+    font-size: 12px;
+  }
+}
+
+/* Small screens (mobile, < 375px height) */
+@media (max-width: 375px) and (max-height: 667px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .app-container {
+    padding: 12px;
+  }
+
+  .goal-container {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .goal-input {
+    font-size: 14px;
+    padding-left: 12px;
+  }
+
+  .progress-text {
+    font-size: 10px;
+    margin-top: 4px;
+  }
+
+  .progressbar {
+    height: 20px;
+  }
+
+  .progress-value {
+    font-size: 8px;
+  }
+
+  .quote-author {
+    font-size: 8px;
+    margin-top: 24px;
+  }
+
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+}
