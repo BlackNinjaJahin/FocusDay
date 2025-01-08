@@ -37,47 +37,48 @@ main {
   border-radius: 15px;
   padding: 32px 48px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
 }
 
 /* Progress Bar Container */
 .progressbar {
+  margin: 10px 0px;
   height: 30px;
   background-color: rgba(72, 163, 0, 0.1);
   border-radius: 15px;
   margin-bottom: 16px;
   position: relative;
-  overflow: hidden; /* Ensures progress stays within bounds */
+  overflow: hidden;
 }
 
 /* Progress Value (Dynamic Text and Bar) */
 .progress-value {
+  
   height: 100%;
   background-color: #48A300;
   border-radius: 15px;
   font-weight: 500;
-  font-size: 12px; /* Adjusted for readability */
-  color: #FBFBFB;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center align text in progress bar */
+  font-size: 12px;
+  color: #48A300;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 30px; /* Vertically centers text in the bar */
   white-space: nowrap;
-  transition: width 0.3s ease; /* Smooth transition for progress updates */
+  transition: width 0.3s ease;
 }
 
 /* Progress Text (Message Below Progress Bar) */
 .progress-text {
   font-size: 14px;
-  color: #858586; /* Neutral color for dynamic messages */
   margin-top: 8px;
   text-align: center;
+  color: #858586; /* Neutral color for dynamic messages */
 }
 
-/* Error State */
 .progress-text.error {
   color: #FF5151; /* Red for error state */
 }
 
-/* Success State */
 .progress-text.success {
   color: #48A300; /* Green for success state */
 }
@@ -86,12 +87,13 @@ main {
   font-size: 14px;
   color: #FF5151;
   margin-top: 4px;
+  text-align: center;
   display: none;
 }
 
 /* Goal Container */
 .goal-container {
-  display: flex; /* Flexbox for alignment */
+  display: flex;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 17px;
@@ -115,7 +117,9 @@ main {
 .custom-checkbox img {
   display: none;
 }
-
+.sun-icon {
+  vertical-align: middle;
+}
 .goal-input {
   border: none;
   outline: none;
@@ -156,9 +160,32 @@ main {
   text-decoration: line-through;
 }
 
-/* Responsive Styles */
+/* Reset Button */
+.reset-button {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  padding: 10px 20px;
+  background-color: #FF5151;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-/* Medium screens (tablets, < 768px) */
+.reset-button:hover {
+  background-color: #E04444;
+  transform: scale(1.05);
+}
+
+.reset-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .title {
     font-size: 28px;
@@ -183,9 +210,12 @@ main {
   .progress-text {
     font-size: 12px;
   }
+
+  .reset-button {
+    font-size: 12px;
+  }
 }
 
-/* Small screens (mobile, < 375px height) */
 @media (max-width: 375px) and (max-height: 667px) {
   .title {
     font-size: 24px;
@@ -226,5 +256,9 @@ main {
   .custom-checkbox {
     width: 20px;
     height: 20px;
+  }
+
+  .reset-button {
+    font-size: 12px;
   }
 }

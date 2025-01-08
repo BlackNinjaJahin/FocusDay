@@ -12,43 +12,74 @@
       <div class="app-container">
         <h2 class="subtitle">
           <span>Today</span>
-          <img class="sun-icon" src="assets/images/sun.svg" alt="Calendar Icon" />
+          <img
+            class="sun-icon"
+            src="assets/images/sun.svg"
+            alt="Calendar Icon"
+          />
         </h2>
         <p class="progress-text">Raise the bar by completing tasks</p>
+       
         <div class="progressbar">
-          <div class="progress-value"></div>
+          <div class="progress-value">0/3 completed</div>
         </div>
 
-        <p class="error-message">Please complete your tasks.</p>
+        <p class="error-message"></p>
 
         <!-- Goal 1 -->
         <div class="goal-container">
           <div class="custom-checkbox">
-            <img class="checked" src="assets/images/accept-icon.svg" alt="Tick Icon" />
+            <img
+              class="checked"
+              src="assets/images/accept-icon.svg"
+              alt="Tick Icon"
+            />
           </div>
-          <input class="goal-input" type="text" placeholder="Add a goal" />
+          <input
+            id="first"
+            class="goal-input"
+            type="text"
+            placeholder="Add a goal"
+          />
         </div>
 
         <!-- Goal 2 -->
         <div class="goal-container">
           <div class="custom-checkbox">
-            <img class="checked" src="assets/images/accept-icon.svg" alt="Tick Icon" />
+            <img
+              class="checked"
+              src="assets/images/accept-icon.svg"
+              alt="Tick Icon"
+            />
           </div>
-          <input class="goal-input" type="text" placeholder="Add a goal" />
+          <input
+            id="second"
+            class="goal-input"
+            type="text"
+            placeholder="Add a goal"
+          />
         </div>
 
         <!-- Goal 3 -->
         <div class="goal-container">
           <div class="custom-checkbox">
-            <img class="checked" src="assets/images/accept-icon.svg" alt="Tick Icon" />
+            <img
+              class="checked"
+              src="assets/images/accept-icon.svg"
+              alt="Tick Icon"
+            />
           </div>
-          <input class="goal-input" type="text" placeholder="Add a goal" />
+          <input
+            id="third"
+            class="goal-input"
+            type="text"
+            placeholder="Add a goal"
+          />
+          
         </div>
-
+        <p class="reset-button">Reset All</p>
         <p class="quote">"Move one step ahead, today!"</p>
-        <p class="quote-author">
-          Made with <3 by <span>Jahin</span>
-        </p>
+        <p class="quote-author">Made with <3 by <span>Jahin</span></p>
       </div>
     </main>
     <script src="assets/script/app.js"></script>
